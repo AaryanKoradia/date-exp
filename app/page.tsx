@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   return <main className="page-shell">
-    <nav className="topbar"><span className="brand-mark">✳</span><span>THE DATE REVIEW</span><span className="top-right">NOT THAT DEEP <i>●</i></span></nav>
+    <nav className="topbar"><span className="brand-mark">M.</span><span>THE DATE REVIEW</span><span className="top-right">NOT THAT DEEP <i>●</i></span></nav>
     <div className="progress-wrap"><div className="progress-track"><div className="progress-fill" style={{ width: `${step === 0 ? 0 : step === 4 ? 100 : step * 25}%` }}/></div><span>{step === 0 ? 'A QUICK THING' : step === 4 ? 'FILED' : `PAGE 0${step} / 04`}</span></div>
 
     {step === 0 && <section className="hero panel fade-in">
@@ -58,6 +58,34 @@ export default function Home() {
       <div className="hero-art" aria-label="Illustration of a burger, fries and drink"><div className="sunburst"/><div className="spark spark-one">✳</div><div className="spark spark-two">✦</div><div className="burger"><div className="bun-top"><i/><i/><i/></div><div className="lettuce"/><div className="cheese"/><div className="patty"/><div className="bun-bottom"/></div><div className="fries"><i/><i/><i/><i/><b/></div><div className="drink"><div className="straw"/><div className="drink-lid"/><div className="drink-cup">M</div></div><div className="art-caption">McD & miscellaneous opinions</div></div>
       <div className="hero-footer"><span>MADE BY AARYAN</span><span>★ &nbsp; CONFIDENTIAL-ISH</span></div>
     </section>}
+
+
+    {step === 1 && <section className="panel form-panel fade-in">
+      <div className="section-kicker">01 / THE EXPERIENCE</div>
+      <h2>So, how was it?</h2>
+      <p className="muted">Let's start with the important stuff. Be honest, Guruji.</p>
+
+      <div className="ratings-grid">
+        <Rating label="Food (McD review)" value={a.food} onChange={v => update('food', v)} />
+        <Rating label="Conversation" value={a.conversation} onChange={v => update('conversation', v)} />
+        <Rating label="Overall vibes" value={a.vibes} onChange={v => update('vibes', v)} />
+        <Rating label="Overall date experience" value={a.overall} onChange={v => update('overall', v)} />
+      </div>
+
+      <div className="note-card">
+        <span className="note-icon">✳</span>
+        <div>
+          <strong>Important question</strong>
+          <p>Was the company better than the fries? Choose your answer wisely.</p>
+        </div>
+      </div>
+
+      <div className="actions">
+        <button className="text-button" onClick={() => setStep(0)}>← Back</button>
+        <button className="primary" onClick={() => setStep(2)}>Continue <span>↗</span></button>
+      </div>
+    </section>}
+
 
     {step === 2 && <section className="panel form-panel fade-in"><div className="section-kicker">02 / THE COMPANY</div><h2>Now, the main character.</h2><p className="muted">A completely unbiased assessment of Aaryan. Obviously.</p>
       <div className="ratings-grid"><Rating label="Humour (debatable)" value={a.humour} onChange={v => update('humour', v)}/><Rating label="Looks (Cute/Hot¿)" value={a.dressing} onChange={v => update('dressing', v)}/><Rating label="General behaviour" value={a.behaviour} onChange={v => update('behaviour', v)}/><Rating label="Overall Aaryan rating" value={a.aaryan} onChange={v => update('aaryan', v)} hint="Please don't let this go to his head."/></div>
