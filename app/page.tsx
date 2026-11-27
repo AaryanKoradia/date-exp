@@ -59,14 +59,8 @@ export default function Home() {
       <div className="hero-footer"><span>MADE BY AARYAN</span><span>★ &nbsp; CONFIDENTIAL-ISH</span></div>
     </section>}
 
-    {step === 1 && <section className="panel form-panel fade-in"><div className="section-kicker">01 / THE DATE</div><h2>First things first.</h2><p className="muted">Let's review the actual outing. Be honest, the fries can take it.</p>
-      <div className="ratings-grid"><Rating label="Food situation" value={a.food} onChange={v => update('food', v)} hint="McD has entered the chat."/><Rating label="Conversation" value={a.conversation} onChange={v => update('conversation', v)}/><Rating label="Overall vibes" value={a.vibes} onChange={v => update('vibes', v)}/><Rating label="The date, overall" value={a.overall} onChange={v => update('overall', v)} hint="The headline rating."/></div>
-      <div className="field-block"><label htmlFor="order">Your ideal next McD order</label><input id="order" value={a.mcdOrder} onChange={e => update('mcdOrder', e.target.value)} placeholder="Fries, burger, McFlurry... the essentials"/></div>
-      <div className="actions"><button className="text-button" onClick={() => setStep(0)}>← Back</button><button className="primary" onClick={() => setStep(2)}>Next <span>↗</span></button></div>
-    </section>}
-
     {step === 2 && <section className="panel form-panel fade-in"><div className="section-kicker">02 / THE COMPANY</div><h2>Now, the main character.</h2><p className="muted">A completely unbiased assessment of Aaryan. Obviously.</p>
-      <div className="ratings-grid"><Rating label="Humour (debatable)" value={a.humour} onChange={v => update('humour', v)}/><Rating label="Dressing sense" value={a.dressing} onChange={v => update('dressing', v)}/><Rating label="General behaviour" value={a.behaviour} onChange={v => update('behaviour', v)}/><Rating label="Overall Aaryan rating" value={a.aaryan} onChange={v => update('aaryan', v)} hint="Please don't let this go to his head."/></div>
+      <div className="ratings-grid"><Rating label="Humour (debatable)" value={a.humour} onChange={v => update('humour', v)}/><Rating label="Looks (Cute/Hot¿)" value={a.dressing} onChange={v => update('dressing', v)}/><Rating label="General behaviour" value={a.behaviour} onChange={v => update('behaviour', v)}/><Rating label="Overall Aaryan rating" value={a.aaryan} onChange={v => update('aaryan', v)} hint="Please don't let this go to his head."/></div>
       <div className="note-card"><span className="note-icon">✎</span><div><strong>General Secretary's final authority</strong><p>All ratings are subject to approval by Guruji. Appeals will not be entertained.</p></div></div>
       <div className="actions"><button className="text-button" onClick={() => setStep(1)}>← Back</button><button className="primary" onClick={() => setStep(3)}>Continue <span>↗</span></button></div>
     </section>}

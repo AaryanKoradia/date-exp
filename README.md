@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+# date-exp
 # Guruji Date Review
 
 A short, playful date-feedback microsite built with Next.js. Designed to deploy directly to Vercel.
@@ -27,6 +27,3 @@ Submissions are saved in the visitor's browser using `localStorage` under `guruj
 - The NO button playfully moves when hovered or touched. It is intentionally not a reliable answer control.
 - The design is responsive and uses CSS illustrations for the McDonald's-inspired food doodle, so no external image assets are required.
 - Google Fonts are loaded remotely; system fallbacks remain available.
-=======
-# date-exp
->>>>>>> 15c2b1ff360921e3170d911623a101a15c7282bb
