@@ -51,7 +51,7 @@ export default function Home() {
     <div className="progress-wrap"><div className="progress-track"><div className="progress-fill" style={{ width: `${step === 0 ? 0 : step === 4 ? 100 : step * 25}%` }}/></div><span>{step === 0 ? 'A QUICK THING' : step === 4 ? 'FILED' : `PAGE 0${step} / 04`}</span></div>
 
     {step === 0 && <section className="hero panel fade-in">
-      <div className="hero-copy"><p className="eyebrow">A VERY IMPORTANT, VERY UNOFFICIAL FORM</p><h1>Hey,<br/><em>Guruji.</em></h1><p className="lede">So... how was McD?</p><p className="muted">A tiny review of the food, the vibes, and the person you had to tolerate for a few hours.</p>
+      <div className="hero-copy"><p className="eyebrow">A VERY IMPORTANT, VERY UNOFFICIAL FORM</p><h1>Hey,<br/><em>Guruji.</em></h1><p className="lede">So... how was the date?</p><p className="muted">A tiny review of the food, the vibes, and the person you had to tolerate for a few hours.</p>
         <button className="primary" onClick={() => setStep(1)}>Let's get into it <span>↗</span></button>
         <p className="micro">Takes about 90 seconds. No pressure.</p>
       </div>
